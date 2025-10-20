@@ -3,24 +3,11 @@ repositories:
       url: https://github.com/manikandarajzma/avd.git
       reference: main
 services:
-    - name: build_fabric
+    - name: build_deploy_fabric
       type: ansible-playbook
-      description: avd to build fabric
+      description: avd to build and deploy fabric
       playbooks: 
         - playbooks/build_fabric.yml
-      repository: avd-fabric
-      working-directory: ./
-      runtime:
-        check: true
-        diff: true
-        skip-tags: example-tag
-        inventory:
-          - ./inventory.yml
-        verbose-level: 6
-    - name: deploy_fabric
-      type: ansible-playbook
-      description: avd to deploy fabric
-      playbooks: 
         - playbooks/deploy_fabric.yml
       repository: avd-fabric
       working-directory: ./
