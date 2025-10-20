@@ -2,4 +2,4 @@ pyavd
 distlib
 cvprac
 jsonschema
-ansible==2.18.0
+ansible-core==2.18.0
