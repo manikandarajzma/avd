@@ -5,13 +5,13 @@ spine:
     loopback_ipv4_pool: 192.168.101.0/24
     mlag: false
   nodes:
-    spine1-DC1:
+    spine1:
       id: 11
       mgmt_ip: 192.168.15.129/24
-    spine2-DC1:
+    spine21:
       id: 12
       mgmt_ip: 192.168.15.128/24
-    spine3-DC1:
+    spine3:
       id: 13
       mgmt_ip: 192.168.15.125/24
 l3leaf:
