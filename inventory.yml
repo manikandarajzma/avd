@@ -35,7 +35,7 @@ all:
                   ansible_host: 192.168.15.129
                 spine2:
                   ansible_host: 192.168.15.128
-                spine3-DC1:
+                spine3:
                   ansible_host: 192.168.15.125
             DC1_LEAFS:
               vars:
