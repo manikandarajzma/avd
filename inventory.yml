@@ -52,7 +52,5 @@ all:
      EVPN_SERVICES:
       children: 
         DC1_LEAFS:
-    ENDPOINT_CONNECTION:
-      children: 
-        DC1_LEAFS:
+
  
