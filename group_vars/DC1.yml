@@ -34,7 +34,7 @@ l3leaf:
     spanning_tree_priority: 16384 
 
   node_groups:
-    dc1_mlag1:
+    - group: dc1_mlag1
       nodes:
         - name: leaf1  
           id: 1
@@ -44,7 +44,7 @@ l3leaf:
           id: 2
           mgmt_ip: 192.168.15.122/24
           uplink_switch_interfaces: [Ethernet3, Ethernet3, Ethernet3]          
-    dc1_mlag2:
+    - group: dc1_mlag2
       nodes:
         - name: leaf3
           id: 3
