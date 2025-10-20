@@ -17,4 +17,18 @@ services:
         inventory:
           - ./inventory.yml
         verbose-level: 6
+    - name: deploy_fabric
+      type: ansible-playbook
+      description: avd to deploy fabric
+      playbooks: 
+        - playbooks/deploy_fabric.yml
+      repository: avd-fabric
+      working-directory: ./
+      runtime:
+        check: true
+        diff: true
+        skip-tags: example-tag
+        inventory:
+          - ./inventory.yml
+        verbose-level: 6
  
