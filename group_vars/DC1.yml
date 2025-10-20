@@ -3,19 +3,15 @@ spine:
   defaults:
     bgp_as: 65100
     loopback_ipv4_pool: 192.168.101.0/24
-    bgp_default:
-      - 'no bgp default ipv4-unicast'
-      - 'distance bgp 20 200 200'
     mlag: false
-    evpn_route_servers: [DCI]
   nodes:
-    spine1:
+    spine1-DC1:
       id: 11
       mgmt_ip: 192.168.15.129/24
-    spine2:
+    spine2-DC1:
       id: 12
       mgmt_ip: 192.168.15.128/24
-    spine3:
+    spine3-DC1:
       id: 13
       mgmt_ip: 192.168.15.125/24
 l3leaf:
