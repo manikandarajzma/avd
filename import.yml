@@ -6,8 +6,8 @@ services:
     - name: build_fabric
       type: ansible-playbook
       description: avd to build fabric
-      filename: build_fabric.yml
-      repository: playbooks/avd-fabric
+      playbooks: playbooks/build_fabric.yml
+      repository: avd-fabric
       working-directory: ./
       runtime:
         check: true
