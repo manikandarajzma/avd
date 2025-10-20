@@ -12,9 +12,6 @@ services:
       repository: avd-fabric
       working-directory: ./
       runtime:
-        check: true
-        diff: true
-        skip-tags: example-tag
         inventory:
           - ./inventory.yml
         verbose-level: 6
