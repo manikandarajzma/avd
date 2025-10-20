@@ -43,7 +43,7 @@ all:
               hosts:
                 leaf1:
                   ansible_host: 192.168.15.120
-                leaf21:
+                leaf2:
                   ansible_host: 192.168.15.122
                 leaf3:
                   ansible_host: 192.168.15.123
