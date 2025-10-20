@@ -1,0 +1,5 @@
+pyavd
+distlib
+cvprac
+jsonschema
+ansible==2.18.0
