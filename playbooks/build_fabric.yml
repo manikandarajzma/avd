@@ -1,6 +1,24 @@
 ---
 - name: Build fabric configuration
   hosts: FABRIC
+  pre_tasks:
+    - name: Parse tenant_list if it's a string
+      set_fact:
+        final_tenant_list: "{{ tenant_list | from_json if tenant_list is string else tenant_list }}"
+      when: tenant_list is defined
+
+    - name: Use default tenant list if not provided
+      set_fact:
+        final_tenant_list: "{{ default_tenant_list }}"
+      when: tenant_list is not defined
+
+    - name: Display tenant configuration
+      debug:
+        msg: "Building fabric with {{ final_tenant_list | length }} tenant(s): {{ final_tenant_list | map(attribute='name') | list | join(', ') }}"
+    
+    - name: Set tenants variable for AVD
+      set_fact:
+        tenants: "{{ final_tenant_list }}"
   tasks:
     - name: Generate AVD structured configs and fabric documentation
       import_role:
