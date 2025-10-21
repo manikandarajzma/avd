@@ -23,6 +23,7 @@ services:
       playbooks: 
         - playbooks/build_fabric.yml
         - playbooks/deploy_fabric.yml
+        - playbooks/validate_fabric.yml
       repository: avd-fabric
       working-directory: ./
       runtime:
