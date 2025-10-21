@@ -1,9 +1,23 @@
+decorators:
+    - name: tenant_list
+      schema:
+        $id: root
+        $schema: http://json-schema.org/draft-07/schema#
+        additionalProperties: false
+        properties:
+            tenant_list:
+                description: list of tenants
+                type: array
+        required:
+            - tenant_list
+        type: object
 repositories:
     - name: avd-fabric
       url: https://github.com/manikandarajzma/avd.git
       reference: main
 services:
     - name: build_deploy_fabric
+      decorator: tenant_list
       type: ansible-playbook
       description: avd to build and deploy fabric
       playbooks: 
